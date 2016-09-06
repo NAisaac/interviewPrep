@@ -1,5 +1,7 @@
 """
-Stacks: LIFO (Last In First Out). Push (Append) & Pop 
+Stacks: LIFO (Last In First Out)
+Push (Append) & Pop 
+Special type of LinkedList
 
 Add a couple methods to our LinkedList class, and use that to implement a Stack.
 Think about: why is it easier to add an "insert_first" function than just use "append"?

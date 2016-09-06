@@ -11,35 +11,42 @@ using loops. Your function should take two inputs:
 1. a Python list to search through
 2. the value you're searching for
 
-Assume the list only has distinct elements, meaning there are no repeated values, 
-and elements are in a strictly increasing order. 
+*** ASSUMPTION: the list only has distinct elements, meaning there are no repeated values ***
 
-Return the index of value, or -1 if the value
-doesn't exist in the list.
+Return the index of value, or -1 if the value doesn't exist in the list.
 """
 
 def binary_search(input_array, value):
-	# loop until length is 1
-	while len(input_array) > 1:
-		# Find middle value or round down
-		middle = len(input_array)/2
+	top_index = len(input_array) - 1
+	bottom_index = 0
+	# loop until we've narrowed our search down to 2 elements
+	while (top_index - bottom_index) > 1:
+		# Find middle index
+		middle_index = (top_index+bottom_index)/2
 		# if value is equal to middle value; return that index
-		if input_array[middle] == value:
-			return middle
-		# if value is greater than middle value; return remaining list
-		elif input_array[middle] < value:
-			input_array = input_array[middle+1:len(input_array)]
-		# if value is less than middle value; return remaining list
+		if input_array[middle_index] == value:
+			return middle_index
+		# if value is greater than middle value; return new top_index and bottom_index
+		elif input_array[middle_index] < value:
+			bottom_index = middle_index + 1
+		# if value is less than middle value; return new top_index and bottom_index
 		else:
-			input_array = input_array[0:middle]
-			
+			top_index = middle_index - 1
 
-	# if last element matches value
-	# else return -1
+	# Once narrowed down to 2 elements
+	if input_array[top_index] == value:
+		return top_index
+	elif input_array[bottom_index] == value:
+		return bottom_index
+	else:
+		return -1
 
 
 test_list = [1,3,9,11,15,19,29]
 test_val1 = 25
 test_val2 = 15
+test_val3 = 11
 print binary_search(test_list, test_val1)
 print binary_search(test_list, test_val2)
+print binary_search(test_list, test_val3)
+
