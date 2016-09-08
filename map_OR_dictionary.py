@@ -23,7 +23,7 @@ for city in usa_sorted:
 
 # Print all cities in Asia, in alphabetic
 asia_cities = []
-for country, city in locations['Asia'].iteritems():
+for country, city in locations['Asia'].items():
 	city_country = city[0] + " - " + country
 	asia_cities.append(city_country)
 asia_sorted = sorted(asia_cities)

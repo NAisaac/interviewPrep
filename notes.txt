@@ -1,0 +1,67 @@
+------------------------------------------------------------
+Tree
+------------------------------------------------------------
+Similar to a linked list, but instead of just one pointer to the next node, a node has one or 
+more pointers
+- All nodes are connected 
+- No cycle allowed
+
+Depth First Search (DFS): first search down through node's children
+Breadth First Search (BFS): first search across the nodes on the same level
+
+------------------------------------------------------------
+Binary Tree
+------------------------------------------------------------
+a type of tree where each node can have at most 2 children (0, 1, or 2 children)
+
+
+------------------------------------------------------------
+Heap (a type of binary tree)
+------------------------------------------------------------
+- Complete: all but leaves have 2 children
+- Array implementation is possible because the # of nodes at each level is 2^n (1, 2, 4, 8, 16 ...)
+
+Max Heap:
+- Parent value > child value (ALWAYS)
+- Max is the root
+
+Min Heap:
+- Parent value < child value (ALWAYS)
+- Min is the root
+
+------------------------------------------------------------
+Graphs (network; data structure showing relationship)
+------------------------------------------------------------
+Disconnected:
+Disconnected graphs are very similar whether the graph's directed or undirected—there is some vertex or group of vertices that have no connection with the rest of the graph.
+
+Weakly Connected:
+A directed graph is weakly connected when only replacing all of the directed edges with undirected edges can cause it to be connected. Imagine that your graph has several vertices with one outbound edge, meaning an edge that points from it to some other vertex in the graph. There's no way to reach all of those vertices from any other vertex in the graph, but if those edges were changed to be undirected all vertices would be easily accessible.
+
+Connected:
+Here we only use "connected graph" to refer to undirected graphs. In a connected graph, there is some path between one vertex and every other vertex.
+
+Strongly Connected:
+Strongly connected directed graphs must have a path from every node and every other node. So, there must be a path from A to B AND B to A.
+
+------------------------------------------------------------
+Graph Representations
+------------------------------------------------------------
+Edge list:
+2D-list that contains all the connection between 2 nodes in the graph
+[[0,1], [0,2], [0,3], [1,3], [2,3]]
+
+Adjacency list:
+2D-list that contains per index, which denotes a node, the nodes it is connected to
+[[1,2,3], [0,3], [0,3], [1,2,3]]
+
+Adjacency Matrix:
+2D-list that shows in a grid the connection between 2 nodes (0 no connection; 1 connection)
+[[0,1,1,1],
+ [1,0,0,1],
+ [1,0,0,1],
+ [1,1,1,0]]
+
+
+
+
