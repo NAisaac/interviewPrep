@@ -11,3 +11,8 @@ example_rectangle = {
 	'height': 4
 }
 """
+def love_rectangle(recA, recB):
+	# Scenarios for intersection
+	## NO overlap
+	## Edge overlap
+	## 
