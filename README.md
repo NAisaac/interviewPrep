@@ -1,4 +1,4 @@
-# Tech Interview Materials!!!
+# Tech Interview Materials
 
 Interview Basics:
 * https://web.stanford.edu/class/cs9/lectures/old/03-interview-basics.html#(1)
