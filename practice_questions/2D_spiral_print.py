@@ -9,7 +9,6 @@ Given a list of lists ...
 the function prints ...
 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
 """
-import pdb
 
 def spiralPrint(matrix):
 	output = []
@@ -63,3 +62,9 @@ print(spiralPrint(theInput))
 theInput = [[1,2,3],[5,6,7],[9,10,11],[13,14,15]]
 print(spiralPrint(theInput))
 
+"""
+Decrement the index range to emulate the boundary on 4 sides closing in
+
+Time complexity: every element in m rows and n columns; O(m*n)
+Space complexity: in-place; O(1)
+"""
