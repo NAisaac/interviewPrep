@@ -92,7 +92,7 @@ DoubleList.prototype.searchNodeAt = function (position) {
   // depending on position from mid length, go down or go up
   traverse = position <= this.length / 2 ? this.traverseDown : this.traverseUp;
   nodes = traverse(position);
-  
+
   return nodes.current;
 };
 
@@ -117,12 +117,12 @@ DoubleList.prototype.removeNodeAt = function (position) {
     this.tail = null;
   } else if (position === 1) {
     // remove head
-    this.head = nodes.next;
     nodes.next.previous = null;
+    this.head = nodes.next;
   } else if (position === this.length) {
     // remove tail
-    this.tail = nodes.previous;
     nodes.previous.next = null;
+    this.tail = nodes.previous;
   } else {
     // remove middle
     nodes.previous.next = nodes.next;
